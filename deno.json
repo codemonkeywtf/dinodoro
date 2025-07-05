@@ -1,8 +1,45 @@
 {
+  // A human-readable name for your project
+  "name": "dinodoro",
+  "version": "1.0.0",
+  "author": "CodeMonkeyWTF",
+
+  // Defines tasks that can be run with `deno task <task_name>`
+  // This is a great way to manage permissions and run scripts easily.
   "tasks": {
-    "dev": "deno run --watch main.ts"
+    "start": "deno run --allow-run dinodoro.ts",
+    "dev": "deno run --allow-run --watch dinodoro.ts"
   },
-  "imports": {
-    "@std/assert": "jsr:@std/assert@1"
+
+  // Configuration for the Deno linter (`deno lint`)
+  "lint": {
+    "files": {
+      "include": ["dinodoro.ts"],
+      "exclude": ["deno.lock"]
+    },
+    "rules": {
+      "tags": ["recommended"],
+      "exclude": ["no-explicit-any"]
+    }
+  },
+
+  // Configuration for the Deno formatter (`deno fmt`)
+  "fmt": {
+    "files": {
+      "include": ["dinodoro.ts"],
+      "exclude": ["deno.lock"]
+    },
+    "options": {
+      "useTabs": false,
+      "lineWidth": 80,
+      "indentWidth": 2,
+      "singleQuote": false
+    }
+  },
+
+  // TypeScript compiler options
+  "compilerOptions": {
+    "lib": ["deno.ns"]
   }
 }
+
