@@ -2,6 +2,7 @@
   // A human-readable name for your project
   "name": "dinodoro",
   "version": "1.0.0",
+  "exports": "./dinodoro.ts",
   "author": "CodeMonkeyWTF",
 
   // Defines tasks that can be run with `deno task <task_name>`
