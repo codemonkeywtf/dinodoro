@@ -33,7 +33,7 @@ This project is built on Deno and is designed for macOS.
 2.  **Install the `dinodoro` command:** Deno allows you to install scripts directly from a URL. Once the code is hosted (e.g., on GitHub), you can install it with:
     ```bash
     # Example installation command (replace with actual URL when available)
-    deno install --allow-run --allow-env -n dinodoro https://your-url-to/dinodoro.ts
+    deno install --allow-run --allow-env --global -n dinodoro https://raw.githubusercontent.com/codemonkeywtf/dinodoro/main/dinodoro.ts
     ```
     * `--allow-run`: Grants permission to run shell commands (for controlling audio and Music).
     * `--allow-env`: Grants permission to read environment variables.
