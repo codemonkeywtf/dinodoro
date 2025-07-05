@@ -103,6 +103,16 @@ function playPlaylist(name: string) {
   const sanitizedName = name.replace(/'/g, "'\\''");
   logStatus(`Starting Apple Music playlist: "${sanitizedName}"`);
   executeAppleScript(`tell application "Music" to play playlist "${sanitizedName}"`);
+    // Give Music a moment to fully load and start the playlist
+  // Then, apply the shuffle and repeat settings
+  setTimeout(() => {
+    executeAppleScript(`
+      tell application "Music"
+          set shuffle enabled to false
+          set repeat mode to all
+      end tell
+    `);
+  }, 500); // 500ms (0.5 second) delay to allow the Music app to react
 }
 
 function pauseMusic() {
