@@ -1,8 +1,12 @@
 {
   // A human-readable name for your project
   "name": "dinodoro",
+<<<<<<< HEAD
   "version": "1.0.0",
   "exports": "./dinodoro.ts",
+=======
+  "version": "1.0.1",
+>>>>>>> 7330ac3 (now version 1.0.1)
   "author": "CodeMonkeyWTF",
 
   // Defines tasks that can be run with `deno task <task_name>`
