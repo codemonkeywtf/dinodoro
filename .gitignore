@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Deno lock file (optional, depends on team preference)
 # If you use a lock file but don't want to commit it, uncomment the line below.
 # deno.lock
@@ -11,6 +12,49 @@ yarn-error.log*
 
 # OS generated files
 # These are system files created by macOS, Windows, and Linux.
+=======
+# Deno / JavaScript
+# -------------------------------------------------------------------
+
+# Compiled executables from `deno compile`
+# These are platform-specific and should be built during a release process.
+*.exe
+*.out
+
+# Bundled output from the deprecated `deno bundle`
+# Modern workflows use `deno compile` or other bundlers.
+bundle.js
+bundle.js.map
+
+# Local environment variables.
+# Contains sensitive information like API keys. Never commit this.
+.env
+.env.local
+.env.*.local
+
+# Log files
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# Dependency directories
+# While Deno doesn't use node_modules, other tools in your toolchain might.
+node_modules/
+dist/
+dist-ssr/
+
+
+# Testing & Coverage
+# -------------------------------------------------------------------
+coverage/
+.nyc_output/
+
+
+# Operating System specific files
+# -------------------------------------------------------------------
+>>>>>>> 665ae37 (added .gitignore)
 .DS_Store
 .DS_Store?
 ._*
@@ -19,6 +63,7 @@ yarn-error.log*
 ehthumbs.db
 Thumbs.db
 
+<<<<<<< HEAD
 # Editor directories and files
 # Configuration files for popular code editors like VS Code and JetBrains IDEs.
 .idea
@@ -37,3 +82,28 @@ Thumbs.db
 .env.test.local
 .env.production.local
 
+=======
+
+# IDE / Editor specific files
+# -------------------------------------------------------------------
+
+# VSCode
+.vscode/
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+*.code-workspace
+
+# JetBrains / WebStorm
+.idea/
+
+# Vim
+*.swp
+*.swo
+
+
+# Deno Language Server Cache
+# Optional: Sometimes useful to ignore if it causes issues, but generally small.
+# .deno_cache/
+>>>>>>> 665ae37 (added .gitignore)
